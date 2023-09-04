@@ -1,7 +1,7 @@
 ![Logo](img/logo1.png "Logo")
 
 
-**Try the app here:** [PDF Analyzer on Streamlit Cloud](https://mehmetba-pdf-analyze-streamlit-qa-app-5uufsy.streamlit.app/)
+**Try the app here:** [PDF Analyzer on Streamlit Cloud](https://6ynfjaaihp7i83canml2y3.streamlit.app/)
 
 # PDF Analyzer App
 
@@ -20,7 +20,7 @@ PDF Analyzer App is a question-answering application that allows users to upload
 Clone this repository:
 
 ```bash
-git clone https://github.com/mehmetba/pdf-analyze-streamlit.git
+git clone https://github.com/hbahuguna/pdf-analyze-streamlit.git
 cd pdf-analyze-streamlit
 ```
 
@@ -41,4 +41,3 @@ streamlit run qa_app.py
 
 After running the command, you can access the app through your web browser using the provided URL.
 
-Developed by [Mehmet Balioglu](https://twitter.com/mehmet_ba7)
