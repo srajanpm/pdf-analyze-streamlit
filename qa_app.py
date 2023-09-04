@@ -11,7 +11,7 @@ from typing import Any, Dict, List
 from streamlit_chat import message
 
 
-st.set_page_config(page_title="PDF QA",page_icon="📕")
+st.set_page_config(page_title="PDF Q&A",page_icon="📕")
 
 
 loaded_text=""
@@ -154,7 +154,8 @@ def main():
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <h1 style="display: inline-block;">QA with PDF & Txt Files</h1>
+        <h1 style="display: inline-block;">Question & Answer with</h1>
+        <h1 style="display: inline-block;">PDF & Txt Files</h1>
     </div>
     """,
     unsafe_allow_html=True,
