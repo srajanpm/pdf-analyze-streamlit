@@ -154,8 +154,8 @@ def main():
     st.write(
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
-        <h1 style="display: inline-block;">Question & Answer with</h1>
-        <h1 style="display: inline-block;">PDF & Txt Files</h1>
+        <p><h1 style="display: inline-block;">Question & Answer with</h1></p>
+        <p><h1 style="display: inline-block;">PDF & Txt Files</h1></p1>
     </div>
     """,
     unsafe_allow_html=True,
