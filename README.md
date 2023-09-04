@@ -1,7 +1,8 @@
 ![Logo](img/logo1.png "Logo")
 
 
-**Try the app here:** [PDF Analyzer on Streamlit Cloud](https://6ynfjaaihp7i83canml2y3.streamlit.app/)
+**Try the app here:** [PDF Analyzer on Streamlit Cloud](https://question-answer-pdf.streamlit.app/)
+**Join the OmniChat Wait list here:** [OmniChat Landing page](https://yep.so/p/omnichat)
 
 # PDF Analyzer App
 

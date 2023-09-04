@@ -91,6 +91,7 @@ def main():
         text-align: center;
     ">
         <p>Made by <a href='https://github.com/hbahuguna/'>Himanshu Bahuguna</a></p>
+        <p><a href='https://yep.so/p/omnichat'>Join OmniChat Wait list</a></p>
     </div>
     """
 
