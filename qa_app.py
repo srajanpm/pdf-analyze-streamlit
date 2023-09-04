@@ -155,7 +155,7 @@ def main():
     f"""
     <div style="display: flex; align-items: center; margin-left: 0;">
         <p><h1 style="display: inline-block;">Question & Answer with</h1></p>
-        <p><h1 style="display: inline-block;">PDF & Txt Files</h1></p1>
+        <p><h1 style="display: inline-block;">PDF & Txt Files</h1></p>
     </div>
     """,
     unsafe_allow_html=True,
