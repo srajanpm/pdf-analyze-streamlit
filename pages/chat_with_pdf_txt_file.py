@@ -146,7 +146,10 @@ def main():
         """,
         unsafe_allow_html=True,
     )
-    st.sidebar.image("img/logo1.png")
+    st.text("")
+    st.text("")
+    st.text("")
+
 
 
    
@@ -174,8 +177,14 @@ def main():
         "Embeddings", ["OpenAI Embeddings"])
 
     
-    retriever_type = st.sidebar.selectbox(
-        "Retriever", ["SIMILARITY SEARCH"])
+
+    st.sidebar.write("")
+    st.sidebar.write("")
+    st.sidebar.write("")
+    from PIL import Image
+    image = Image.open('img/logo1.png')
+
+    st.sidebar.image(image)
 
     # Use RecursiveCharacterTextSplitter as the default and only text splitter
     splitter_type = "RecursiveCharacterTextSplitter"
