@@ -65,7 +65,7 @@ def create_db_and_analye(video_url):
         shutil.rmtree('../db')
     requests_cache.clear()
     transcript=trans.get_transcript(video_url)
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_text(transcript)
     embeddings = OpenAIEmbeddings()
     db = Chroma.from_texts(texts,
