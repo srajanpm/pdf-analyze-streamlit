@@ -32,7 +32,8 @@ def create_db_and_analye(video_url):
     # Question and answering
     prompt = st.text_input("Prompt", placeholder="Enter your question here...")
     if len(prompt) != 0:
-        st.button("Submit")
+        res1 = ''.join(random.choices(string.ascii_letters, k=7))
+        st.button("Submit", key=res1)
         with st.spinner("Generating response..."):
             if len(prompt) != 0:
                 generated_response = qa({"question": prompt, "chat_history": st.session_state["chat_history"]})
@@ -54,8 +55,8 @@ def create_db_and_analye(video_url):
                             user_query,
                             is_user=True,
                         )
-                        res = ''.join(random.choices(string.ascii_letters, k=5))
-                        message(generated_response, key=res)
+                        res2 = ''.join(random.choices(string.ascii_letters, k=5))
+                        message(generated_response, key=res2)
 
 
 
