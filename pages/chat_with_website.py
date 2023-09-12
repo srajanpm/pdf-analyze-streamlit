@@ -44,7 +44,7 @@ def load_docs(website_url):
     all_text = ""
     i=0
     for u in urls:
-        if i > 500:
+        if i > 100:
             break
         loc = u.find('loc').string
         resp_loc = requests.get(loc)
