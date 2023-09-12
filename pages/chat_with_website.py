@@ -42,12 +42,16 @@ def load_docs(website_url):
 
     #extract what we need from the url
     all_text = ""
+    i=0
     for u in urls:
+        if i > 500:
+            break
         loc = u.find('loc').string
         resp_loc = requests.get(loc)
         if 200 != resp_loc.status_code:
             continue
         all_text += resp_loc.text
+        i = i + 1
     return all_text
 
 @st.cache_resource
