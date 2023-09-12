@@ -11,3 +11,6 @@ chromadb==0.3.29
 pytube
 youtube_transcript_api
 requests_cache
+nest_asyncio
+lxml
+bs4

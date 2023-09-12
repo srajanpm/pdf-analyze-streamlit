@@ -1,5 +1,3 @@
-import PyPDF2
-from io import StringIO
 import os
 import streamlit as st
 import requests
