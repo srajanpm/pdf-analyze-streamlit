@@ -26,32 +26,21 @@ def load_docs(website_url):
     resp = requests.get(sitemap_url)
     if 200 != resp.status_code:
         return False
-
-    # BeautifulStoneSoup to parse the document
-    soup = Soup(resp.content)
-
-    # find all the <url> tags in the document
-    urls = soup.findAll('url')
-
-    # no urls? bail
-    if not urls:
-        return False
-
-    # storage for later...
-    out = []
-
-    #extract what we need from the url
+    import re
+    import itertools
+    locs = re.compile(r'<loc>(.*?)</loc>', re.DOTALL)
+    urls = []
+    for m in itertools.islice(re.finditer(locs, resp.content.decode('utf-8')), 15):
+        url = m.group(1)
+        urls.append(url)
     all_text = ""
-    i=0
-    for u in urls:
-        if i > 100:
-            break
-        loc = u.find('loc').string
-        resp_loc = requests.get(loc)
+
+    for url in urls:
+        resp_loc = requests.get(url)
         if 200 != resp_loc.status_code:
             continue
         all_text += resp_loc.text
-        i = i + 1
+
     return all_text
 
 @st.cache_resource
@@ -178,7 +167,7 @@ def main():
         <p><h1 style="display: inline-block;">Question & Answer with</h1></p>
     </div>
     <div style="display: flex; align-items: center; margin-left: 0;">
-    <p><h1 style="display: inline-block;">Website Data</h1></p>
+    <p><h1 style="display: inline-block;">Website Data(First 15 urls in sitemap)</h1></p>
     </div>
     """,
     unsafe_allow_html=True,
