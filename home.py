@@ -10,7 +10,8 @@ body = f"""
     text-align: left;
 ">
     <p><a href='/chat_with_pdf_txt_file'>Chat With PDF & TXT Files</a></p>
-    <p><a href='/chat_with_website'>Chat With Website Data</a></p>
+    <p><a href='/chat_with_website'>Chat With Website sitemap xml Data</a></p>
+    <p><a href='/chat_with_website'>Chat With Webpage </a></p>
     <p><a href='/chat_with_youtube_videos'>Chat With Youtube Video</a></p>
 </div>
 """
