@@ -39,12 +39,14 @@ Transcript:{""" + transcript + "}"
     qa = ConversationalRetrievalChain.from_llm(
         llm=chat_openai, retriever=retriever, return_source_documents=True
     )
-    generated_response = qa({"question": prompt, "chat_history": st.session_state["chat_history"]})
-    res2 = ''.join(random.choices(string.ascii_letters, k=5))
-    formatted_response = (
-        f"{generated_response['answer']}"
-    )
-    message(formatted_response, key=res2)
+    st.write("Ready to generate article.")
+    with st.spinner("Generating article..."):
+        generated_response = qa({"question": prompt, "chat_history": st.session_state["chat_history"]})
+        res2 = ''.join(random.choices(string.ascii_letters, k=5))
+        formatted_response = (
+            f"{generated_response['answer']}"
+        )
+        message(formatted_response, key=res2)
 
 
 def create_db_and_analye(video_url):
