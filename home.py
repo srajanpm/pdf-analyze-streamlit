@@ -13,6 +13,7 @@ body = f"""
     <p><a href='/chat_with_website'>Chat With Webpage </a></p>
     <p><a href='/youtube_transcript_to_article'>Create Article from Youtube Video</a></p>
     <p><a href='/chat_with_youtube_videos'>Chat With Youtube Video</a></p>
+    <p><a href='/translator'>Translate English Text to another Language</a></p>
     <p><a href='/chat_with_website'>Chat With Website sitemap xml Data</a></p>
 </div>
 """
