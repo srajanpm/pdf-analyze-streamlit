@@ -22,7 +22,7 @@ st.set_page_config(page_title="Website Q&A",page_icon="📕")
 @st.cache_resource
 def load_docs(website_url):
     st.info("`Loading website data ...`")
-    sitemap_url = website_url + "/sitemap.xml"
+    sitemap_url = website_url
     resp = requests.get(sitemap_url)
     if 200 != resp.status_code:
         return False
@@ -193,7 +193,7 @@ def main():
 
     st.sidebar.image(image)
 
-    website_url = st.text_input("Website URL")
+    website_url = st.text_input("Please enter Website Sitemap xml URL")
     button_disabled = len(website_url) == 0
     st.button("Submit Website", disabled=button_disabled)
     if len(website_url) != 0:
