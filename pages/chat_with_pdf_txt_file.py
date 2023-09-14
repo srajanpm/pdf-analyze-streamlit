@@ -9,6 +9,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from typing import Any, Dict, List
 from streamlit_chat import message
+import random
+import string
 
 
 st.set_page_config(page_title="PDF Q&A",page_icon="📕")
@@ -232,11 +234,14 @@ def main():
                 st.session_state["chat_answers_history"],
                 st.session_state["user_prompt_history"],
             ):
+                res = ''.join(random.choices(string.ascii_letters, k=5))
                 message(
                     user_query,
                     is_user=True,
+                    key=res
                 )
-                message(generated_response)
+                res1 = ''.join(random.choices(string.ascii_letters, k=5))
+                message(generated_response, key=res1)
 
 
 if __name__ == "__main__":

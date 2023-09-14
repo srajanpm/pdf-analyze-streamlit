@@ -218,9 +218,11 @@ def main():
                             st.session_state["chat_answers_history"],
                             st.session_state["user_prompt_history"],
                         ):
+                            res = ''.join(random.choices(string.ascii_letters, k=5))
                             message(
                                 user_query,
                                 is_user=True,
+                                key=res
                             )
                             res2 = ''.join(random.choices(string.ascii_letters, k=5))
                             message(generated_response, key=res2)
